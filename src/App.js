@@ -1,6 +1,6 @@
 import { Home } from "./components/Home/Home";
 import { NavBar } from "./components/NavBar/NavBar";
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { SobreMi } from "./components/SobreMi/SobreMi";
 
 function App() {

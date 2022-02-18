@@ -1,5 +1,39 @@
-#sobre-mi{
-    width: 100vw;
-    height: 100vh;
-    background-color: purple;
+#sobre-mi {
+  width: 100vw;
+  // height: 150vh;
+  height: auto;
+  min-height: fit-content;
+  background-color: rgb(251, 251, 251);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .sobre-mi-txt {
+    width: 80%;
+    text-align: center;
+    font-size: 12px;
+    margin: 10px;
+    .sobre-mi-p {
+      font-style: italic;
+    }
+  }
+  .burbuja-sz-1 {
+    width: 10vw;
+    height: 10vw;
+    background-color: rgb(170, 170, 179);
+    border-radius: 100%;
+  }
+}
+#burbuja {
+  width: 60vw;
+  height: 60vw;
+  background-color: rgb(170, 170, 170);
+  border-radius: 100%;
+}
+#sobre-mi-principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,14 +1,14 @@
 import React from 'react'
 import './Home.scss'
 import { FaAngleDown } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 export const Home = () => {
   return (
     <div id='home'>
         <div id='burbujas'>
             <div id='burbuja'>
-            </div>
+        </div>
         </div>
         <div id='welcome'>
             <h3>BIENVENIDOS A</h3>
