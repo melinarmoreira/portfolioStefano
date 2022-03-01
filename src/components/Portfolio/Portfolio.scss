@@ -1,0 +1,15 @@
+#box-widget {
+   height: 150px;
+   width: 150px;
+   background-color: rgb(170, 170, 170);
+}
+
+.widgets {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+}
+
+.widget {
+   margin: 10px;
+}

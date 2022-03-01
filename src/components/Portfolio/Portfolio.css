@@ -1,0 +1,22 @@
+#box-widget {
+  height: 150px;
+  width: 150px;
+  background-color: #aaaaaa;
+}
+
+.widgets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.widget {
+  margin: 10px;
+}
+/*# sourceMappingURL=Portfolio.css.map */
