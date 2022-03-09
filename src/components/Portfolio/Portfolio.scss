@@ -1,6 +1,29 @@
+.container-portfolio {
+   width: 100vw;
+}
+
+#texto-portfolio {
+   text-align: center;
+
+   h2 {
+      font-size: medium;
+      font-weight: 500;
+   }
+}
+#select {
+   max-width: 50%;
+   min-width: fit-content;
+   margin: 5% auto;
+   font-size: medium;
+}
+
 #box-widget {
-   height: 150px;
-   width: 150px;
+   min-width: 250px;
+   // min-width: %;
+   min-height: 250px;
+   max-width: 250px;
+   max-height: 250px;
+   // height: 40vh;
    background-color: rgb(170, 170, 170);
 }
 
@@ -8,8 +31,23 @@
    display: flex;
    flex-direction: row;
    flex-wrap: nowrap;
+   overflow-x: auto;
+
+   .widgets::-webkit-scrollbar {
+      width: 0;
+   }
 }
 
 .widget {
-   margin: 10px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   // min-width: 250px;
+   min-width: 250px;
+   min-height: 300px;
+   max-width: 250px;
+   max-height: 300px;
+   align-items: center;
+   margin: 20px;
+   background-color: rgb(244, 244, 248);
 }

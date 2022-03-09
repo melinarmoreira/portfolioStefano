@@ -14,12 +14,12 @@ const options = [
 
 export const Portfolio = () => {
   const [value, setValue] = useState(null);
-  const [info, setInfo] = useState(portfolio);
+  const [info] = useState(portfolio);
   const [nuevaInfo, setNuevaInfo] = useState(portfolio);
 
   const onDropDownChange = (value) => {
 
-    if (value.value != "todo") {
+    if (value.value !== "todo") {
       setValue(value);
       const filteredData = info.filter(
         (item) => item.categoria === value.value
@@ -33,10 +33,13 @@ export const Portfolio = () => {
   return (
     <>
       <div id="container-portfolio">
+        <div id="texto-portfolio">
         <h1>PORTFOLIO</h1>
         <h2>¡Aqui te presento algunos de mis ultimos proyectos!</h2>
+        </div>
         <div>
           <Select
+            id="select"
             value={value}
             options={options}
             onChange={onDropDownChange}
