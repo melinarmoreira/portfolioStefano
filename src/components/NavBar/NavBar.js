@@ -14,10 +14,10 @@ export const NavBar = () => {
                 <nav>
                     <label class="toggle-menu" for="toggle"><FiX id='toggle-menu' /></label>
                     <ul>
-                        <li><a class="options-menu" href="#Home">Sobre Mi</a></li>
-                        <li><a class="options-menu" href="#Home">Portfolio</a></li>
-                        <li><a class="options-menu" href="#Home" >Servicios</a></li>
-                        <li><a class="options-menu" href="#Home">Clientes</a></li>
+                        <li><a class="options-menu" href="#sobre-mi">Sobre Mi</a></li>
+                        <li><a class="options-menu" href="#portfolio">Portfolio</a></li>
+                        <li><a class="options-menu" href="#servicios" >Servicios</a></li>
+                        <li><a class="options-menu" href="#clientes">Clientes</a></li>
                     </ul>
                 </nav>
             </div>
