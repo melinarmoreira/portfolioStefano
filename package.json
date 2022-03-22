@@ -12,6 +12,7 @@
     "react-router-dom": "5",
     "react-scripts": "5.0.0",
     "react-select": "^5.2.2",
+    "swiper": "^8.0.7",
     "web-vitals": "^2.1.0"
   },
   "scripts": {

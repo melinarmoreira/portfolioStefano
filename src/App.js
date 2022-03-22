@@ -1,23 +1,29 @@
 import { Home } from "./components/Home/Home";
 import { NavBar } from "./components/NavBar/NavBar";
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { SobreMi } from "./components/SobreMi/SobreMi";
 import { Portfolio } from "./components/Portfolio/Portfolio";
 import { Servicios } from "./components/Servicios/Servicios";
+import { Clientes } from "./components/Clientes/Clientes";
 
+// import "swiper/css";
+// import "swiper/css/pagination";
+
+// import "../node_modules/swiper/swiper.scss";
 
 function App() {
   return (
     <BrowserRouter>
-        <NavBar />
-        <Switch>
-            <Route exact path="/">
-              <Home />
-              <SobreMi path="/sobremi" />
-              <Portfolio  path="/portfolio/:categoria" />
-              <Servicios path="/servicios" />
-            </Route>
-        </Switch>
+      <NavBar />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+          <SobreMi path="/sobremi" />
+          <Portfolio path="/portfolio/:categoria" />
+          <Servicios path="/servicios" />
+          <Clientes path="/clientes" />
+        </Route>
+      </Switch>
     </BrowserRouter>
   );
 }

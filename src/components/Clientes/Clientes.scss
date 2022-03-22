@@ -1,0 +1,28 @@
+.container-clientes {
+  height: 100vh;
+  background-color: rgb(160, 152, 152);
+
+  #container-texto-clientes {
+    max-width: 90%;
+    text-align: center;
+    h4 {
+      padding-top: 5vw;
+      font-size: 30px;
+      font-weight: bolder;
+    }
+    p {
+      font-size: 15px;
+      font-weight: 500;
+    }
+  }
+}
+.container-carrousel {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-carrousel {
+  width: 15vw;
+  margin: 0vw 10vw;
+}
