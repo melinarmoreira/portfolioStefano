@@ -1,14 +1,15 @@
 #sobre-mi {
-  width: 100vw;
-  // height: 150vh;
-  height: auto;
+  width: 100%;
+  height: 100vh;
   min-height: fit-content;
-  background-color: rgb(251, 251, 251);
+  background-color: white;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  position: absolute;
+  margin-top: -50vh;
   .sobre-mi-txt {
     width: 80%;
     text-align: center;
@@ -26,8 +27,8 @@
   }
 }
 #burbuja {
-  width: 60vw;
-  height: 60vw;
+  width: 100px;
+  height: 100px;
   background-color: rgb(170, 170, 170);
   border-radius: 100%;
 }
@@ -36,4 +37,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+//responsive
+@media (min-width: 800px) {
+  #sobre-mi{
+    width: 90%;
+    margin-left: 5%;
+  }
 }

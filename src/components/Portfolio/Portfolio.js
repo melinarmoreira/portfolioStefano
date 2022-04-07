@@ -32,7 +32,7 @@ export const Portfolio = () => {
 
   return (
     <>
-      <div id="container-portfolio">
+      <div id="portfolio">
         <div id="texto-portfolio">
         <h1>PORTFOLIO</h1>
         <h2>¡Aqui te presento algunos de mis ultimos proyectos!</h2>
