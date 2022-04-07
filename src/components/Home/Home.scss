@@ -1,50 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 #home{
-    width: 100vw;
-    // height: 100vh;
+    width: 100%;
+    min-height: 100vh;
+    padding-bottom: 50vh;
     //aca para que no se rompa al cambiar los tamaños lo cambie a height - auto
     height: auto;
-    background-color: rgb(170, 170, 170);
+    background: linear-gradient(115.59deg, #0E0E0E 47.91%, rgba(98, 6, 0, 0.94) 98.61%);
     display: flex;
     flex-direction: column;
-    display: block;
-    #burbujas{
-        width: 100%;
-        height: 60%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20vh 0 2vh 0;
-        #burbuja{
-            width: 70vw;
-            height: 70vw;
-            background-color: rgb(251, 251, 251);
-            border-radius: 100%;
+    #content-profile-welcome{
+        height: 100vh;
+        margin-top: -10vh;
+        #burbujas{
+            width: 100%;
+            height: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10vh 0 2vh 0;
+            #burbuja{
+                width: 300px;
+                height: 300px;
+                background-color: rgba(0, 0, 0, 0);
+                border-radius: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                #burbuja-naranja{
+                    width: 80%;
+                    height: 80%;
+                    background: linear-gradient(180deg, #F77F00 0%, #D33131 100%);
+                    border-radius: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        width: 110%;
+                    }
+                }
+            }
         }
-    }
-    #welcome{
-        width: 100%;
-        height: 20%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 2vh 0;
-        h1{
-            margin: 0 0;
-            padding: 1vh 0;
-        }
-        h2{
-            margin: 0 0;
-            font-size: 2.2vh;
-        }
-        h3{
-            margin: 0 0;
-            font-size: 1.3vh;
+        #welcome{
+            width: 100%;
+            height: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: -5vh;
+            #text{
+                text-align: center;
+                h1{
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 300;
+                    font-size: 4vh;
+                    margin: 0 0;
+                    padding: 1vh 0;
+                    color: #F77F00;
+                }
+                h2{
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 400;
+                    margin: 0 0;
+                    font-size: 2.2vh;
+                    color: white;
+                }
+                h3{
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 500;
+                    color: white;
+                    margin: 0 0;
+                    font-size: 2.5vh;
+                }
+            }
         }
     }
     #arrow{
         width: 100%;
-        height: 20%;
+        height: 20vh;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
         a{
             display: flex;
             flex-direction: column;
@@ -53,14 +91,67 @@
                 font-size: 5vh;
             }
             #arrow-25{
-                color: rgba(0, 0, 0, 0.164);
+                color: rgba(255, 255, 255, 0.164);
             }
             #arrow-55{
-                color: rgba(0, 0, 0, 0.548);
+                color: rgba(255, 255, 255, 0.548);
             }
             #arrow-100{
-                color: black;
+                color: rgb(255, 255, 255);
+            }
+        }
+        #wsp{
+            width: 60px;
+            height: 60px;
+            background: #F77F00;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+            border-radius: 100%;
+            position: absolute;
+            bottom: 2vh;
+            right: 2vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .wsp-icon{
+                color: white;
+                width: 80%;
+                height: 80%;
             }
         }
     }
 }
+
+//Responsive
+@media (min-width: 800px) {
+    #home{
+        #content-profile-welcome{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
+            #burbujas{
+                margin-top: 10vh;
+                #burbuja{
+                    width: 35vw;
+                    height: 35vw;
+                }
+            }
+            #welcome{
+                align-items: flex-start;
+                height: 100%;
+                margin-top: 10vh;
+                padding: 2vh 0;
+                #text{
+                    padding-left: 10vw;
+                    text-align: left;
+                    h1{
+                        font-size: 4vw;
+                    }
+                    h2{
+                        font-size: 1.9vw;
+                    }
+                }
+            }
+        }
+    }
+  }

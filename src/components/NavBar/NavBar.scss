@@ -4,15 +4,18 @@
     border-bottom: 1px solid black;
     display: flex;
     justify-content: space-between;
-    position: sticky;
+    position: fixed;
     top: 0;
     background-color: #fff;
+    z-index: 2;
     #profile{
         width: 6vh;
         height: 6vh;
         margin: .5vh 2vw;
-        background-color: rgb(158, 158, 158);
         border-radius: 100%;
+        img{
+            width: 100%;
+        }
     }
     #menu-container{
         display: block;
