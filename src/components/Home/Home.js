@@ -28,7 +28,7 @@ export const Home = () => {
           <div id='wsp'>
             <AiOutlineWhatsApp className='wsp-icon'/>
           </div>
-          <a href='#sobre-mi'>
+          <a href='#sobre-mi-content'>
             <FaAngleDown className='arrow-down' id='arrow-25'/>
             <FaAngleDown className='arrow-down' id='arrow-55'/>
             <FaAngleDown className='arrow-down' id='arrow-100'/>

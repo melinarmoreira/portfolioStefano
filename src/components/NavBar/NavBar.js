@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './NavBar.scss'
 import { FiMenu, FiX } from "react-icons/fi";
 import logoStefano from "../../img/logo/logo-stefano.png"
@@ -22,7 +22,7 @@ export const NavBar = () => {
                 <nav>
                     <label class="toggle-menu" for="toggle"><FiX id='toggle-menu' /></label>
                     <ul>
-                        <li><a class="options-menu" onClick={()=>closeMenu()} href="#sobre-mi">Sobre Mi</a></li>
+                        <li><a class="options-menu" onClick={()=>closeMenu()} href="#sobre-mi-content">Sobre Mi</a></li>
                         <li><a class="options-menu" onClick={()=>closeMenu()}  href="#portfolio">Portfolio</a></li>
                         <li><a class="options-menu" onClick={()=>closeMenu()} href="#servicios" >Servicios</a></li>
                         <li><a class="options-menu" onClick={()=>closeMenu()} href="#clientes">Clientes</a></li>

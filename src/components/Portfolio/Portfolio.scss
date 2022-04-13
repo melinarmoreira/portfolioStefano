@@ -1,7 +1,7 @@
 #portfolio {
   width: 100%;
   height: fit-content;
-  padding-top: 50vh;
+  padding-top: 70vh;
   background-color: #FFD19B;
 }
 
@@ -36,4 +36,9 @@
   min-height: 48vw;
   margin-left: 3vw;
   background-color: rgb(150, 150, 161);
+}
+@media (min-width: 800px) {
+  #portfolio{
+    padding-top: 50vh;
+  }
 }

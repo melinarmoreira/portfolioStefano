@@ -5,7 +5,7 @@ import { Portfolio } from "./components/Portfolio/Portfolio";
 import { Servicios } from "./components/Servicios/Servicios";
 import { Clientes } from "./components/Clientes/Clientes";
 import { NavBarResponsive } from "./helpers/NavBarResponsive";
-
+import "./App.scss"
 // import "swiper/css";
 // import "swiper/css/pagination";
 
