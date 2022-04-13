@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 #home{
     width: 100%;
     min-height: 100vh;
     padding-bottom: 50vh;
-    //aca para que no se rompa al cambiar los tamaños lo cambie a height - auto
+    //aca para que no se rompa al cambiar los tamaños lo cambie a height - 
     height: auto;
     background: linear-gradient(115.59deg, #0E0E0E 47.91%, rgba(98, 6, 0, 0.94) 98.61%);
     display: flex;
@@ -79,6 +78,7 @@
         width: 100%;
         height: 20vh;
         position: absolute;
+        z-index: 1;
         bottom: 0;
         display: flex;
         justify-content: center;

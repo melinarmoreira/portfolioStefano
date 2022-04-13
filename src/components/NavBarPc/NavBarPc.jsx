@@ -13,7 +13,7 @@ export const NavBarPc = () => {
         <div id="menu-container">
             <nav>
                 <ul>
-                    <a class="options-menu" href="#sobre-mi"><li>Sobre Mi</li></a>
+                    <a class="options-menu" href="#sobre-mi-content"><li>Sobre Mi</li></a>
                     <a class="options-menu" href="#portfolio"><li>Portfolio</li></a>
                     <a class="options-menu" href="#servicios" ><li>Servicios</li></a>
                     <a class="options-menu" href="#clientes"><li>Clientes</li></a>
