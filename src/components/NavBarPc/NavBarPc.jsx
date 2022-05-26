@@ -7,7 +7,7 @@ export const NavBarPc = () => {
     <div id="nav-bar-pc">
         <div id="profile">
             <a href="#home">
-                <img src={logoStefano} alt="" />
+                <img src={logoStefano} alt="Stefano Sotelo" />
             </a>
         </div>
         <div id="menu-container">

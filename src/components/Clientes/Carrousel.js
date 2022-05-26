@@ -2,10 +2,10 @@ import "./Clientes.scss";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 //Import logos
-import LogoGramaMedia from "../assets/grama-media.png";
-import LogoLocucionar from "../assets/locucionar.png";
-import LogoUns from "../assets/uns.jpg";
-import LogoBahia from "../assets/bahia.png";
+import LogoGramaMedia from "../../img/carrousel/grama-media.png"
+import LogoLocucionar from "../../img/carrousel/locucionar.png";
+import LogoUns from "../../img/carrousel/uns.png";
+import LogoBahia from "../../img/carrousel/bahia.png";
 // import files swiper
 import "swiper/css";
 import "swiper/css/pagination";

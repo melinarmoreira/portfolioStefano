@@ -6,12 +6,13 @@ import { Servicios } from "./components/Servicios/Servicios";
 import { Clientes } from "./components/Clientes/Clientes";
 import { NavBarResponsive } from "./helpers/NavBarResponsive";
 import "./App.scss"
-// import "swiper/css";
-// import "swiper/css/pagination";
+import { ContextAPI } from "./components/ContextAPI/ContextAPI";
 
-// import "../node_modules/swiper/swiper.scss";
 
 function App() {
+
+
+
   return (
     <BrowserRouter>
       <NavBarResponsive />
@@ -22,6 +23,7 @@ function App() {
           <Portfolio path="/portfolio/:categoria" />
           <Servicios path="/servicios" />
           <Clientes path="/clientes" />
+          <ContextAPI></ContextAPI>
         </Route>
       </Switch>
     </BrowserRouter>

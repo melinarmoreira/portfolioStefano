@@ -3,6 +3,29 @@ import "./Portfolio.scss";
 import { WidgetPortfolio } from "./WidgetPortfolio";
 import { portfolio } from "../Helper/Helper";
 import Select from "react-select";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper";
+
+
+import "swiper/scss";
+import "swiper/scss/pagination";
+import "swiper/scss/navigation";
+
+// import "./styles.scss";
+// const styles: StylesConfig < ColourOption, false> = {
+//   control: (css) => ({ ...css, display: '' }),
+// };
+
+///firestore
+
+
+
+
+
+
+ 
+
+
 
 const options = [
   { value: "todo", label: "Todo" },
@@ -30,12 +53,27 @@ export const Portfolio = () => {
     }
   };
 
+
+ 
+//   useEffect(() => {
+//     const obtenerDatos = async () => {
+//       const datos = await getDocs(collection(db, "portfolio"));
+//       console.log(datos)
+//       datos.forEach((documento) =>  {
+//         console.log(documento.data)
+//       });
+//     }
+
+//     obtenerDatos();
+
+// }, [])
+
   return (
     <>
       <div id="portfolio">
         <div id="texto-portfolio">
-        <h1>PORTFOLIO</h1>
-        <h2>¡Aqui te presento algunos de mis ultimos proyectos!</h2>
+          <h2>PORTFOLIO</h2>
+          <p>¡Aqui te presento algunos de mis ultimos proyectos!</p>
         </div>
         <div>
           <Select
@@ -43,13 +81,31 @@ export const Portfolio = () => {
             value={value}
             options={options}
             onChange={onDropDownChange}
+            // styles={styles}
             placeholder="Selecciona"
+            
+
           />
         </div>
         <div className="widgets">
-          {nuevaInfo.map((info) => {
-            return <WidgetPortfolio info={info} key={info.id} />
-          })}
+            <Swiper
+            style={{
+            "--swiper-navigation-color": "#fff",
+            "--swiper-navigation-background":"fff",
+          }}
+            slidesPerView={3}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+            className="mySwiper">
+
+              {nuevaInfo.map((info) => {
+                return (
+                  <SwiperSlide>
+                    <WidgetPortfolio info={info} key={info.id} />
+                  </SwiperSlide>
+                )
+            })}
+          </Swiper>
         </div>
       </div>
     </>
