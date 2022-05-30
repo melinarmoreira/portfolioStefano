@@ -24,8 +24,9 @@ export const NavBar = () => {
                     <ul>
                         <li><a class="options-menu" onClick={()=>closeMenu()} href="#sobre-mi-content">Sobre Mi</a></li>
                         <li><a class="options-menu" onClick={()=>closeMenu()}  href="#portfolio">Portfolio</a></li>
-                        <li><a class="options-menu" onClick={()=>closeMenu()} href="#servicios" >Servicios</a></li>
+                        <li><a class="options-menu" onClick={()=>closeMenu()} href="#servicios-content" >Servicios</a></li>
                         <li><a class="options-menu" onClick={()=>closeMenu()} href="#clientes">Clientes</a></li>
+                        <li><a class="options-menu" onClick={()=>closeMenu()} href="#formulario-content">Contacto</a></li>
                     </ul>
                 </nav>
             </div>
