@@ -22,7 +22,7 @@ export const SobreMi = () => {
           <div className="text-content">
             <p className="title">“En 2018 fundé Grama Media, productora especializada en podcast y livestreaming”</p>
             <p className="text">
-            Tiene base en Bahía Blanca pero que realizo contenidos para todo LATAM y habla hispana. Además, soy docente en el área audiovisual de la Universidad Salesiana y me dedico a ofrecer soluciones prácticas de comunicación, brindando consultorías, talleres y produciendo contenidos en formato sonoro y audiovisual para marcas, emprendedores y organizaciones.
+              Tiene base en Bahía Blanca pero que realizo contenidos para todo LATAM y habla hispana. Además, soy docente en el área audiovisual de la Universidad Salesiana y me dedico a ofrecer soluciones prácticas de comunicación, brindando consultorías, talleres y produciendo contenidos en formato sonoro y audiovisual para marcas, emprendedores y organizaciones.
             </p>
           </div>
         </div>

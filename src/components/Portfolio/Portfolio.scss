@@ -1,11 +1,14 @@
+#portfolio-content{
+  padding-top: 70vh;
+  height: 190vh;
+  background-color: #FFD19B;
+}
 #portfolio {
+  margin-top: 2vh;
   width: 100%;
   height: fit-content;
-  padding-top: 70vh;
-  background-color: #FFD19B;
   line-height: 36px;
-  height: 120vh;
-  
+  height: 90vh;
 }
 
 #texto-portfolio {
@@ -100,8 +103,13 @@
 
 
 }
+@media (min-width: 1024px) {
+  #portfolio-content{
+    height: 150vh;
+  }
+}
 @media (min-width: 800px) {
-  #portfolio{
+  #portfolio-content{
     padding-top: 50vh;
   }
 }

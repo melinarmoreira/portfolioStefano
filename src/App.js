@@ -7,6 +7,8 @@ import { Clientes } from "./components/Clientes/Clientes";
 import { NavBarResponsive } from "./helpers/NavBarResponsive";
 import "./App.scss"
 import { ContextAPI } from "./components/ContextAPI/ContextAPI";
+import { Contacto } from "./components/Contacto/Contacto";
+import { Footer } from "./components/Footer/Footer";
 
 
 function App() {
@@ -23,7 +25,8 @@ function App() {
           <Portfolio path="/portfolio/:categoria" />
           <Servicios path="/servicios" />
           <Clientes path="/clientes" />
-          <ContextAPI></ContextAPI>
+          <Contacto path="/contacto" />
+          <Footer path="/footer" />
         </Route>
       </Switch>
     </BrowserRouter>

@@ -1,0 +1,65 @@
+#contacto{
+    background: #FFD19B;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    #img-content{
+        width: 40%;
+        display: none;
+        img{
+            width: 70%;
+            float: right;
+        }
+    }
+    #formulario{
+        position: absolute;
+        background-color: white;
+        width: 90%;
+        margin-left: 5%;
+        height: auto;
+        margin-top: -60vh;
+        border-radius: 4%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2vh 0;
+        h4{
+            text-align: center;
+            font-size: 3vh;
+            font-weight: 500;
+        }
+        h5{
+            text-align: center;
+            font-size: 2vh;
+            font-weight: 400;
+        }
+        input, textarea{
+            width: 80%;
+            padding: 1.2vh;
+            margin: 1vh;
+            border: 1px solid rgb(121, 121, 121);
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif;
+        }
+        #submit{
+            background-color: black;
+            color: white;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    #contacto{
+        height: 90vh;
+        #img-content{
+            display: block;
+        }
+        #formulario{
+            width: 400px;
+            right: 10vw;
+            margin-top: 0;
+        }
+    }
+}
