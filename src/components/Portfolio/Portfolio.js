@@ -69,7 +69,7 @@ export const Portfolio = () => {
 // }, [])
 
   return (
-    <>
+    <div id="portfolio-content">
       <div id="portfolio">
         <div id="texto-portfolio">
           <h2>PORTFOLIO</h2>
@@ -108,6 +108,6 @@ export const Portfolio = () => {
           </Swiper>
         </div>
       </div>
-    </>
+    </div>
   );
 };

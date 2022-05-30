@@ -31,16 +31,24 @@ export const Carrousel = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img class="img-carrousel" alt="Grama Media" src={LogoGramaMedia}></img>
+          <div className="burbuja">
+            <img class="img-carrousel" alt="Grama Media" src={LogoGramaMedia}></img>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img class="img-carrousel" alt="Locucionar" src={LogoLocucionar}></img>
+          <div className="burbuja">
+            <img class="img-carrousel" alt="Locucionar" src={LogoLocucionar}></img>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img class="img-carrousel" alt="UNS" src={LogoUns}></img>
+          <div className="burbuja">
+            <img class="img-carrousel" alt="UNS" src={LogoUns}></img>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img class="img-carrousel" alt="Bahia Municipio" src={LogoBahia}></img>
+          <div className="burbuja">
+            <img class="img-carrousel" alt="Bahia Municipio" src={LogoBahia}></img>
+          </div>
         </SwiperSlide>
       </Swiper>
     </div>

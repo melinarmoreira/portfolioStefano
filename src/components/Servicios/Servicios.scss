@@ -1,46 +1,88 @@
-#servicios {
+#servicios-content{
+  position: absolute;
+  max-height: 200vh;
+  margin-top: -100vh;
+}
+#servicios{
   width: 100%;
-  height: fit-content;
+  max-height: 200vh;
+  padding: 4vh 0;
+  min-height: fit-content;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  #title{
+    h2{
+      font-size: 3vh;
+      font-weight: 500;
+      text-align: center;
+    }
+    h3{
+      font-size: 2.2vh;
+      font-weight: 400;
+      text-align: center;
+    }
+  }
+  .box-servicios{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .box{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2vh 10px;
+      .burbuja{
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .icon-burbuja{
+          width: 60%;
+          height: 60%;
+        }
+      }
+      .text{
+        h4{
+          font-size: 2vh;
+          text-align: center;
+          font-weight: 600;
+        }
+        h5{
+          font-size: 1.7vh;
+          text-align: center;
+          font-weight: 400;
+        }
+      }
+    }
+  }
 }
-#container-texto-servicios {
-  max-width: 90%;
-  text-align: center;
-
-  h3 {
-    font-size: 30px;
-    font-weight: bolder;
+@media (min-width: 1024px) {
+  #servicios-content{
+    margin-top: -55vh;
   }
-  p {
-    font-size: 15px;
-    font-weight: 500;
-  }
-}
-.container-card-servicios {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 90%;
-  height: fit-content;
-  margin: 30px;
-
-  p {
-    text-align: center;
-    font-size: 15px;
-    line-height: 20px;
-  }
-
-  h4 {
-    font-size: 20px;
-    font-weight: 500;
+  #servicios{
+    max-height: 110vh;
+    .box-servicios{
+      flex-direction: row;
+      align-items:baseline;
+      .box{
+        width: 40%;
+        height: 100%;
+      }
+    }
   }
 }
-
-#circle {
-  height: 50vw;
-  width: 50vw;
-  background-color: #c4c4c4;
-  border-radius: 100%;
+@media (min-width: 800px) {
+  #servicios{
+    width: 90%;
+    margin-left: 5%;
+    height: 160vh;
+    padding: 0;
+  }
 }
