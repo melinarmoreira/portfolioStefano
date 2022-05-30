@@ -27,6 +27,7 @@ function App() {
           <Clientes path="/clientes" />
           <Contacto path="/contacto" />
           <Footer path="/footer" />
+          <ContextAPI></ContextAPI>
         </Route>
       </Switch>
     </BrowserRouter>
