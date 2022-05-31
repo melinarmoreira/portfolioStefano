@@ -28,13 +28,17 @@
                 #burbuja-naranja{
                     width: 80%;
                     height: 80%;
-                    background: linear-gradient(180deg, #F77F00 0%, #D33131 100%);
+                    //background: linear-gradient(180deg, #F77F00 0%, #D33131 100%);
                     border-radius: 100%;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    img{
-                        width: 110%;
+                    #gradient{
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 100%;
+                        background: linear-gradient(180deg, #F77F00 0%, #D33131 100%);
+                        opacity: 70%;
                     }
                 }
             }
@@ -63,13 +67,6 @@
                     margin: 0 0;
                     font-size: 2.2vh;
                     color: white;
-                }
-                h3{
-                    font-family: 'Poppins', sans-serif;
-                    font-weight: 500;
-                    color: white;
-                    margin: 0 0;
-                    font-size: 2.5vh;
                 }
             }
         }
