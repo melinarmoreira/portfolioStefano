@@ -1,26 +1,30 @@
 import React from 'react'
 import './Home.scss'
 import { FaAngleDown } from "react-icons/fa";
-import megafono from "../../img/icons/megafono.png"
+import stefano from "../../img/home/home.png"
 import { AiOutlineWhatsApp } from "react-icons/ai";
 // import { Link } from 'react-router-dom';
 
 export const Home = () => {
+  const containerStyle = {
+    backgroundImage:
+      `url(${stefano})`,
+    backgroundSize:"cover"
+  };
   return (
     <div id='home'>
         <div id='content-profile-welcome'>
           <div id='burbujas'>
               <div id='burbuja'>
-                <div id='burbuja-naranja'>
-                  <img src={megafono} alt="" />
+                <div id='burbuja-naranja' style={containerStyle}>
+                  <div id='gradient'></div>
                 </div>
               </div>
           </div>
           <div id='welcome'>
               <div id='text'>
-                <h3>BIENVENIDOS A</h3>
                 <h1>Stefano Sotelo</h1>
-                <h2>Creo contenido</h2>
+                <h2>Media Producer</h2>
               </div>
           </div>
         </div>
