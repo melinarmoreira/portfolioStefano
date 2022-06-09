@@ -23,19 +23,33 @@ export const Portfolio = (lista) => {
 
   const [value, setValue] = useState("todo");
   const [nuevaInfo, setNuevaInfo] = useState(lista.lista);
+  const [cantSlides, setCantSlides] = useState(3)
 
   const onDropDownChange = (value) => {
-    
-      if (value.value !== "todo") {
-        setValue(value);
-        const filteredData = lista.lista.filter(
-          (item) => item.categoria == value.value
-        );
-        setNuevaInfo(filteredData)
-      } else {
-        setNuevaInfo(lista.lista);
-      }
-    };
+
+    if (value.value !== "todo") {
+      setValue(value);
+      const filteredData = lista.lista.filter(
+        (item) => item.categoria === value.value
+      );
+      setNuevaInfo(filteredData)
+      //cambia la cantidad de items mostrados dependiendo la longitud del array
+      modifSlides(filteredData)
+    } else {
+      setNuevaInfo(lista.lista);
+      setCantSlides(3)
+    }
+  };
+  const modifSlides = (filteredData) => {
+    if(filteredData.length === 1){
+      setCantSlides(1)
+    }else if(filteredData.length === 2){
+      setCantSlides(2)
+    }else if(filteredData.length > 2){
+      setCantSlides(3)
+    }
+  }
+
 
 
 
@@ -61,19 +75,21 @@ export const Portfolio = (lista) => {
             "--swiper-navigation-color": "#fff",
             "--swiper-navigation-background":"fff",
           }}
-            slidesPerView={3}
+            slidesPerView={cantSlides}
             navigation={true}
             modules={[Pagination, Navigation]}
             className="mySwiper">
 
-            {console.log(nuevaInfo)}
-              {nuevaInfo.map((info) => {
-                return (
+              {console.log(nuevaInfo)}
+              {
+                nuevaInfo.map((info) => {
+                  return(
                   <SwiperSlide key={info.id}>
-                    <WidgetPortfolio info={info} key={info.id} />
-                  </SwiperSlide>
-                )
-            })}
+                      <WidgetPortfolio info={info} key={info.id} />
+                    </SwiperSlide>
+                  )
+                })
+              }
           </Swiper>
         </div>
       </div>
