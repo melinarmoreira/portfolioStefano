@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Portfolio.scss";
 import { WidgetPortfolio } from "./WidgetPortfolio";
-import { portfolio } from "../Helper/Helper";
+// import { portfolio } from "../Helper/Helper";
 import Select from "react-select";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
@@ -11,22 +11,6 @@ import "swiper/scss";
 import "swiper/scss/pagination";
 import "swiper/scss/navigation";
 
-// import "./styles.scss";
-// const styles: StylesConfig < ColourOption, false> = {
-//   control: (css) => ({ ...css, display: '' }),
-// };
-
-///firestore
-
-
-
-
-
-
- 
-
-
-
 const options = [
   { value: "todo", label: "Todo" },
   { value: "podcast", label: "Podcast" },
@@ -35,38 +19,25 @@ const options = [
   { value: "comunicacion", label: "Comunicación" },
 ];
 
-export const Portfolio = () => {
-  const [value, setValue] = useState(null);
-  const [info] = useState(portfolio);
-  const [nuevaInfo, setNuevaInfo] = useState(portfolio);
+export const Portfolio = (lista) => {
+
+  const [value, setValue] = useState("todo");
+  const [nuevaInfo, setNuevaInfo] = useState(lista.lista);
 
   const onDropDownChange = (value) => {
+    
+      if (value.value !== "todo") {
+        setValue(value);
+        const filteredData = lista.lista.filter(
+          (item) => item.categoria == value.value
+        );
+        setNuevaInfo(filteredData)
+      } else {
+        setNuevaInfo(lista.lista);
+      }
+    };
 
-    if (value.value !== "todo") {
-      setValue(value);
-      const filteredData = info.filter(
-        (item) => item.categoria === value.value
-      );
-      setNuevaInfo(filteredData);
-    } else {
-      setNuevaInfo(portfolio);
-    }
-  };
 
-
- 
-//   useEffect(() => {
-//     const obtenerDatos = async () => {
-//       const datos = await getDocs(collection(db, "portfolio"));
-//       console.log(datos)
-//       datos.forEach((documento) =>  {
-//         console.log(documento.data)
-//       });
-//     }
-
-//     obtenerDatos();
-
-// }, [])
 
   return (
     <div id="portfolio-content">
@@ -81,10 +52,7 @@ export const Portfolio = () => {
             value={value}
             options={options}
             onChange={onDropDownChange}
-            // styles={styles}
             placeholder="Selecciona"
-            
-
           />
         </div>
         <div className="widgets">
@@ -98,9 +66,10 @@ export const Portfolio = () => {
             modules={[Pagination, Navigation]}
             className="mySwiper">
 
+            {console.log(nuevaInfo)}
               {nuevaInfo.map((info) => {
                 return (
-                  <SwiperSlide>
+                  <SwiperSlide key={info.id}>
                     <WidgetPortfolio info={info} key={info.id} />
                   </SwiperSlide>
                 )
@@ -110,4 +79,4 @@ export const Portfolio = () => {
       </div>
     </div>
   );
-};
+}
