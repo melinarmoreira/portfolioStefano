@@ -17,14 +17,27 @@
             justify-content: center;
             align-items: center;
             padding: 10vh 0 2vh 0;
+            .vector{
+                position: absolute;
+                width: 150px;
+            }
+            .vector-top{
+                margin-top: -25px;
+                margin-left: -80px;
+            }
+            .vector-bottom{
+                margin-top: 125px;
+                margin-left: 80px;
+                transform: rotate(180deg);
+            }
             #burbuja{
                 width: 300px;
                 height: 300px;
                 background-color: rgba(0, 0, 0, 0);
-                border-radius: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                margin-top: 100px;
                 #burbuja-naranja{
                     width: 80%;
                     height: 80%;
@@ -38,7 +51,7 @@
                         height: 100%;
                         border-radius: 100%;
                         background: linear-gradient(180deg, #F77F00 0%, #D33131 100%);
-                        opacity: 70%;
+                        mix-blend-mode: screen;
                     }
                 }
             }
@@ -104,6 +117,7 @@
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
             border-radius: 100%;
             position: absolute;
+            z-index: 5;
             bottom: 2vh;
             right: 2vw;
             display: flex;
@@ -127,8 +141,21 @@
             justify-content: center;
             align-items: center;
             #burbujas{
-                margin-top: 10vh;
+                margin-top: 15vh;
+                .vector{
+                    position: absolute;
+                    width: 15vw;
+                }
+                .vector-top{
+                    margin-top: -9.5vw;
+                    margin-left: -10vw;
+                }
+                .vector-bottom{
+                    margin-top: 9.5vw;
+                    margin-left: 10vw;
+                }
                 #burbuja{
+                    margin: 0;
                     width: 35vw;
                     height: 35vw;
                 }
