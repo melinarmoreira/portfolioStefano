@@ -5,7 +5,7 @@
 }
 #sobre-mi {
   width: 100%;
-  max-height: 120vh;
+  max-height: 150vh; //120
   padding: 4vh 0;
   min-height: fit-content;
   background-color: rgb(255, 255, 255);
@@ -16,23 +16,54 @@
   align-items: center;
   margin-top: 9vh;
   #foto-content{
+    #minor-burb{
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(180deg, rgba(247, 127, 0, 0.8) 0%, rgba(211, 49, 49, 0.8) 100%);
+      transform: rotate(180deg);
+      position: absolute;
+      margin-top: 10px;
+      border-radius: 100%;
+    }
+    #mayor-burb{
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(180deg, rgba(247, 127, 0, 0.8) 0%, rgba(211, 49, 49, 0.8) 100%);
+      transform: rotate(167deg);
+      position: absolute;
+      margin-top: 70px;
+      margin-left: 80px;
+      border-radius: 100%;
+    }
     #burbuja{
+      position: relative;
       width: 250px;
       height: 250px;
-      border-radius: 100%;
       img{
+        z-index: 2;
         width: 100%;
         height: 100%;
       }
     }
   }
-  #data{
-    padding: 0 3vw;
+  .data{
+    padding: 4vh 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     h1{
+      font-size: 3.2vh;
       text-align: center;
       font-weight: 500;
     }
+    .small-burbuja{
+      width: 35px;
+      height: 35px;
+      background: linear-gradient(180deg, rgba(247, 127, 0, 0.8) 0%, rgba(211, 49, 49, 0.8) 100%);
+      border-radius: 100%;
+    }
     .text-content{
+      text-align: center;
       .title{
         font-size: 2.4vh;
       }
@@ -56,15 +87,31 @@
       width: 45%;
       display: flex;
       justify-content: center;
+      #minor-burb{
+        width: 7vw;
+        height: 7vw;
+        margin-top: 1vw;
+        margin-left: -18vw;
+      }
+      #mayor-burb{
+        width: 18vw;
+        height: 18vw;
+        margin-top: 9vw;
+        margin-left: 8vw;
+      }
       #burbuja{
         width: 25vw;
         height: 25vw;
       }
     }
-    #data{
+    .data{
+      padding: 0 3vw;
       width: 55%;
       h1{
         text-align: start;
+      }
+      .text-content{
+        text-align: left;
       }
     }
   }

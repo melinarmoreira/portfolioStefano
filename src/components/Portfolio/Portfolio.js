@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Portfolio.scss";
 import { WidgetPortfolio } from "./WidgetPortfolio";
-// import { portfolio } from "../Helper/Helper";
 import Select from "react-select";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
+import { useMediaQuery } from 'react-responsive'
 
 
 import "swiper/scss";
@@ -20,13 +20,18 @@ const options = [
 ];
 
 export const Portfolio = (lista) => {
-
+  const max2 = useMediaQuery({ query: '(max-width: 1370px)' })
+  const max1 = useMediaQuery({ query: '(max-width: 1033px)' })
   const [value, setValue] = useState("todo");
   const [nuevaInfo, setNuevaInfo] = useState(lista.lista);
   const [cantSlides, setCantSlides] = useState(3)
+  const [loading, setLoading] = useState(true)
 
+  useEffect(() => {
+    modifSlides(lista.lista)
+  }, [])
+  
   const onDropDownChange = (value) => {
-
     if (value.value !== "todo") {
       setValue(value);
       const filteredData = lista.lista.filter(
@@ -37,17 +42,30 @@ export const Portfolio = (lista) => {
       modifSlides(filteredData)
     } else {
       setNuevaInfo(lista.lista);
-      setCantSlides(3)
+      modifSlides(lista.lista)
     }
   };
   const modifSlides = (filteredData) => {
-    if(filteredData.length === 1){
-      setCantSlides(1)
-    }else if(filteredData.length === 2){
-      setCantSlides(2)
-    }else if(filteredData.length > 2){
-      setCantSlides(3)
+    if(max2===true){
+      if(max1===true){
+        setCantSlides(1)
+      }else{
+        if(filteredData.length === 1){
+          setCantSlides(1)
+        }else if(filteredData.length >=2){
+          setCantSlides(2)
+        }
+      }
+    }else{
+      if(filteredData.length === 1){
+        setCantSlides(1)
+      }else if(filteredData.length === 2){
+        setCantSlides(2)
+      }else if(filteredData.length > 2){
+        setCantSlides(3)
+      }
     }
+    setLoading(false)
   }
 
 
@@ -57,7 +75,7 @@ export const Portfolio = (lista) => {
     <div id="portfolio-content">
       <div id="portfolio">
         <div id="texto-portfolio">
-          <h2>PORTFOLIO</h2>
+          <h3>PORTFOLIO</h3>
           <p>¡Aqui te presento algunos de mis ultimos proyectos!</p>
         </div>
         <div>
@@ -84,9 +102,14 @@ export const Portfolio = (lista) => {
               {
                 nuevaInfo.map((info) => {
                   return(
-                  <SwiperSlide key={info.id}>
+                  <SwiperSlide key={info.id} className="widget-content" style={{width:"200px"}}>
+                    {
+                      loading?
+                      <WidgetPortfolio info={""} key={info.id} style={{minWidth: "50%", minHeight: "30vh"}}/>
+                      :
                       <WidgetPortfolio info={info} key={info.id} />
-                    </SwiperSlide>
+                    }
+                  </SwiperSlide>
                   )
                 })
               }

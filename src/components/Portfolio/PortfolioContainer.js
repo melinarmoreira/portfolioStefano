@@ -1,15 +1,13 @@
 import { Portfolio } from "./Portfolio"
-import { createContext, useEffect, useState } from "react";
-import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { useEffect, useState } from "react";
+import { collection, getDocs } from "firebase/firestore";
 import db from "../../firebase/FirebaseConfig"
-import { async } from "@firebase/util";
-import { doc, getDoc } from "firebase/firestore";
 
 export const PortfolioContainer = () => {
 
     let [lista, setLista] = useState([])
-    
-    
+    const [loading, setLoading] = useState(true)
+
     useEffect(() => {
 
             const getLista = async () => {
@@ -21,19 +19,23 @@ export const PortfolioContainer = () => {
                         docs.push({ ...doc.data(), id: doc.id })
                     })
                     setLista(docs)
+                    setLoading(false)
                 }
                 catch (error) {
                     console.log(error)
                 }
             }
             getLista()
-            
         }, [])
     
     return (
-        <>
-            <Portfolio lista = {lista}>
-            </Portfolio>
+        <>  
+            {
+            loading?
+                <div>Cargando...</div>
+            :
+                <Portfolio lista = {lista}/>
+            }
         </>
 
     )

@@ -1,5 +1,5 @@
 #portfolio-content{
-  padding-top: 70vh;
+  padding-top: 100vh;
   height: 190vh;
   background-color: #FFD19B;
 }
@@ -10,17 +10,58 @@
   line-height: 36px;
   height: 90vh;
   padding-top: 8vh;
+  .swiper-wrapper {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    .widget-content{
+      margin-top: 4vh;
+      max-width: 100vw;
+      display: flex;
+      justify-content: center;
+      .widget{
+        max-width: 50%;
+        background-color: rgb(255, 255, 255);
+        border-radius: 3%;
+        a{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
+          color: black;
+          font-size: 1.8vh;
+          border-radius: 3%;
+          .txt-widget{
+            width: 90%;
+            padding: 0 5%;
+            p{
+            width: 100%;
+            text-align: left;
+            }
+          }
+          .img-widget{
+            border-top-left-radius: 3%;
+            border-top-right-radius: 3%;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
 }
 
 #texto-portfolio {
   text-align: center;
 
   h3 {
-    font-size: medium;
+    font-size: 3.2vh;
     font-weight: 500;
   }
 
   p {
+    font-size: 2vh;
     font-weight: 400;
   }
 }
@@ -32,77 +73,26 @@
   z-index: 90;
 }
 
-.widgets {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  // overflow-x: auto;
-  
 
 
-  // .widgets::-webkit-scrollbar {
-  //   width: 0;
-  //   display: hidden;
-   
-  // }
-
-  // .widgets::-webkit-scrollbar-thumb {
-  //   background-color: #fafafa;
-  //   opacity: 0;
-  // }
-}
-
-// .widgets {
-//   scroll-behavior: smooth;
-// }
-
-.widget {
-  margin-left: 5vw;
-  border-radius: 12px 12px 0px 0px;
-  background-color: white;
-  max-width: 23vw;
-  border-radius: 12px 12px 12px 12px ;
-  text-decoration: none;
-  // min-width: 25vw;
-  // min-height: 25vw;
-  // margin-left: 3vw;
-  // background-color: #fafafa;
-
-  .img-widget {
-    width: 23vw;
-    height: 23vw;
-    min-width: fit-content;
-    min-height: 23vw;
-    background-position-x: center;
-    border-radius: 12px 12px 0px 0px;
-
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  .txt-widget {
-    width: 23vw;
-    height: 3vw;
-    display: flex;
-    justify-content: flex-start;
-    align-content: center ;
-    color: black;
-    font-size: 1.2vw;
-    font-weight: 500;
-    line-height: 24px;
-
-    p {
-      margin-left: 2vw;
+@media (min-width: 1279px) {
+  #portfolio {
+    .swiper-wrapper {
+      .widget-content{
+        .widget{
+          max-width: 70%;
+          a{
+            .txt-widget{
+              p{
+              }
+            }
+            .img-widget{
+            }
+          }
+        }
+      }
     }
-
-  
-    
   }
-
-
-
 }
 @media (min-width: 1024px) {
   #portfolio-content{
