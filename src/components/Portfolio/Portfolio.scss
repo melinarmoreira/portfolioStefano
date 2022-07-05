@@ -1,13 +1,13 @@
 #portfolio-content{
   padding-top: 100vh;
-  margin-bottom: 15vh;
+  padding-bottom: 15vh;
   height: 200vh;
   background-color: #FFD19B;
 }
 
 @media (max-width: 600px) {
   #portfolio-content {
-    margin-bottom: 0vh;
+    padding-bottom: 0vh;
     height: 180vh;
     // height: 100vw;
   }
@@ -98,15 +98,6 @@
       .widget-content{
         .widget{
           max-width: 70%;
-          a{
-            .txt-widget{
-              p{
-                
-              }
-            }
-            .img-widget{
-            }
-          }
         }
       }
     }
