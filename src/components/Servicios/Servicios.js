@@ -23,7 +23,8 @@ export const Servicios = () => {
               <h5>Desde mi home studio y en menos de 24hs, le pongo voz a la idea que quieras comunicar o vender. En la sección portfolio podes encontrar mis DEMOS con trabajos de locución realizados anteriormente.</h5>
             </div>
           </div>
-          <div className="box">
+          <div className="box"
+          >
             <div className="burbuja" style={{background:"#F77F00CC"}}>
               <MdOutlineHeadsetMic className="icon-burbuja" style={{color: "black"}}/>
             </div>

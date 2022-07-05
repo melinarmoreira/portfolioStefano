@@ -3,6 +3,11 @@
   padding-top: 100vh;
   background-color: #171717;
 }
+@media (max-width: 600px) {
+  #clientes-content {
+    height: auto;
+  }
+}
 #clientes {
   height: 90vh;
   color: white;
@@ -23,9 +28,11 @@
 }
 .container-carrousel {
   width: 100%;
+  padding-top: 5vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: auto;
   .burbuja{
     background-color: rgb(255, 255, 255);
     width: 20vw;

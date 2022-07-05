@@ -57,65 +57,63 @@ export const Portfolio = (lista) => {
         }
       }
     }else{
-      if(filteredData.length === 1){
-        setCantSlides(1)
-      }else if(filteredData.length === 2){
-        setCantSlides(2)
-      }else if(filteredData.length > 2){
-        setCantSlides(3)
+      if (filteredData.length === 1){
+        setCantSlides(1);
+      } else if(filteredData.length === 2){
+        setCantSlides(2);
+      } else if (filteredData.length > 2) {
+        setCantSlides(3);
+        console.log(3)
       }
     }
     setLoading(false)
   }
 
-
-
-
   return (
     <div id="portfolio-content">
       <div id="portfolio">
         <div id="texto-portfolio">
-          <h3>PORTFOLIO</h3>
+          <h2>PORTFOLIO</h2>
           <p>¡Aqui te presento algunos de mis ultimos proyectos!</p>
         </div>
         <div>
-          <Select
-            id="select"
-            value={value}
-            options={options}
-            onChange={onDropDownChange}
-            placeholder="Selecciona"
-          />
-        </div>
-        <div className="widgets">
-            <Swiper
-            style={{
-            "--swiper-navigation-color": "#fff",
-            "--swiper-navigation-background":"fff",
-          }}
-            slidesPerView={cantSlides}
-            navigation={true}
-            modules={[Pagination, Navigation]}
-            className="mySwiper">
-
-              {console.log(nuevaInfo)}
-              {
-                nuevaInfo.map((info) => {
-                  return(
-                  <SwiperSlide key={info.id} className="widget-content" style={{width:"200px"}}>
-                    {
-                      loading?
-                      <WidgetPortfolio info={""} key={info.id} style={{minWidth: "50%", minHeight: "30vh"}}/>
-                      :
-                      <WidgetPortfolio info={info} key={info.id} />
-                    }
-                  </SwiperSlide>
-                  )
-                })
-              }
-          </Swiper>
+              <Select
+              id="select"
+              value={value}
+              options={options}
+              onChange={onDropDownChange}
+              placeholder="Selecciona"
+            />
+          </div>
+          <div className="widgets">
+              <Swiper
+              style={{
+              "--swiper-navigation-color": "#fff",
+              "--swiper-navigation-background":"fff",
+            }}
+              slidesPerView={cantSlides}
+              navigation={true}
+              modules={[Pagination, Navigation]}
+              className="mySwiper">
+  
+                {console.log(nuevaInfo)}
+                {
+                  nuevaInfo.map((info) => {
+                    return(
+                    <SwiperSlide key={info.id} className="widget-content" style={{width:"200px"}}>
+                      {
+                        loading?
+                        <WidgetPortfolio info={""} key={info.id} style={{minWidth: "50%", minHeight: "30vh"}}/>
+                        :
+                        <WidgetPortfolio info={info} key={info.id} />
+                      }
+                    </SwiperSlide>
+                    )
+                  })
+                }
+            </Swiper>
+          </div>
         </div>
       </div>
-    </div>
   );
 }

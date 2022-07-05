@@ -4,7 +4,8 @@ import { FaAngleDown } from "react-icons/fa";
 import stefano from "../../img/home/home.png"
 import vector from "../../img/home/vector.png"
 import { AiOutlineWhatsApp } from "react-icons/ai";
-// import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
+
 
 export const Home = () => {
 
@@ -23,15 +24,26 @@ export const Home = () => {
               <img className='vector vector-top'src={vector} />
               <img className='vector vector-bottom'src={vector} />
               <div id='burbuja'>
-                <div id='burbuja-naranja' style={containerStyle}>
+                <motion.div id='burbuja-naranja' style={containerStyle} 
+                                              initial={{y: "-10vw"}}
+                                              animate={{y: "0vw", 
+                                              transition: {duration: 1, ease: "easeInOut"}}} >
                   <div id='gradient'></div>
-                </div>
+                </motion.div>
               </div>
           </div>
           <div id='welcome'>
               <div id='text'>
-                <h1>Stefano Sotelo</h1>
-                <h2>Media Producer</h2>
+                <motion.h1 
+                initial={{y: "-10vw"}}
+                animate={{y: "0vw", 
+                transition: {duration: 1, ease: "easeInOut"}}}
+                >Stefano Sotelo</motion.h1>
+                <motion.h2 
+                initial={{y: "-10vw"}}
+                animate={{y: "0vw", 
+                transition: {duration: 1, ease: "easeInOut"}}}
+                >Media Producer</motion.h2>
               </div>
           </div>
         </div>

@@ -11,18 +11,26 @@ export const Footer = () => {
             <img src={logo} alt="logo stefano"/>
         </div>
         <div id='redes'>
-            <div className='burbuja'>
-                <FaLinkedinIn className='icon' />
-            </div>
-            <div className='burbuja'>
-                <AiFillInstagram className='icon' />
-            </div>
-            <div className='burbuja'>
-                <AiOutlineBehance className='icon' />
-            </div>
-            <div className='burbuja'>
-                <AiFillYoutube className='icon' />
-            </div>
+            <a href="https://www.linkedin.com/in/stefanosotelo/" target="_blank">
+                <div className='burbuja'>
+                    <FaLinkedinIn className='icon' />
+                </div>
+            </a>
+            <a href="https://www.instagram.com/stefasotelo/" target="_blank">
+                <div className='burbuja'>
+                    <AiFillInstagram className='icon' />
+                </div>
+            </a>
+            <a href="https://www.behance.net/stefanosotelo" target="_blank">
+                <div className='burbuja'>
+                    <AiOutlineBehance className='icon' />
+                </div>
+            </a>
+            <a href="https://www.youtube.com/channel/UCwOhifMi7CIJr0IpPc9sFLQ" target="_blank">
+                <div className='burbuja'>
+                    <AiFillYoutube className='icon' />
+                </div>
+            </a>
         </div>
         <div id='copy'>
             <h5>© Copyright 2022 | Coderhouse</h5>
