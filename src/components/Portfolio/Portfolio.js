@@ -63,7 +63,6 @@ export const Portfolio = (lista) => {
         setCantSlides(2);
       } else if (filteredData.length > 2) {
         setCantSlides(3);
-        console.log(3)
       }
     }
     setLoading(false)
@@ -95,8 +94,6 @@ export const Portfolio = (lista) => {
               navigation={true}
               modules={[Pagination, Navigation]}
               className="mySwiper">
-  
-                {console.log(nuevaInfo)}
                 {
                   nuevaInfo.map((info) => {
                     return(

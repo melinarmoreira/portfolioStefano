@@ -6,8 +6,7 @@ import emailjs from "emailjs-com";
 export const enviarMail = (e) => {
   e.preventDefault();
   emailjs.sendForm('service_r257kpc', 'template_7yufk5s', e.target, 'CQfVZAB_SCTCj6ElT').then(res=>{
-    alert("se envio el mensaje correctamente");
-    console.log(res);
+    alert("¡Gracias por tu mensaje! Te contestare a la brevedad");
   })
 }
 

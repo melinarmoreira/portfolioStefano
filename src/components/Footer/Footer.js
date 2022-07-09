@@ -11,22 +11,22 @@ export const Footer = () => {
             <img src={logo} alt="logo stefano"/>
         </div>
         <div id='redes'>
-            <a href="https://www.linkedin.com/in/stefanosotelo/" target="_blank">
+            <a href="https://www.linkedin.com/in/stefanosotelo/" rel="noreferrer" target="_blank">
                 <div className='burbuja'>
                     <FaLinkedinIn className='icon' />
                 </div>
             </a>
-            <a href="https://www.instagram.com/stefasotelo/" target="_blank">
+            <a href="https://www.instagram.com/stefasotelo/" rel="noreferrer" target="_blank">
                 <div className='burbuja'>
                     <AiFillInstagram className='icon' />
                 </div>
             </a>
-            <a href="https://www.behance.net/stefanosotelo" target="_blank">
+            <a href="https://www.behance.net/stefanosotelo" rel="noreferrer" target="_blank">
                 <div className='burbuja'>
                     <AiOutlineBehance className='icon' />
                 </div>
             </a>
-            <a href="https://www.youtube.com/channel/UCwOhifMi7CIJr0IpPc9sFLQ" target="_blank">
+            <a href="https://www.youtube.com/channel/UCwOhifMi7CIJr0IpPc9sFLQ" rel="noreferrer" target="_blank">
                 <div className='burbuja'>
                     <AiFillYoutube className='icon' />
                 </div>

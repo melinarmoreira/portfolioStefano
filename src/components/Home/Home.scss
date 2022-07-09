@@ -2,14 +2,13 @@
     width: 100%;
     min-height: 100vh;
     padding-bottom: 50vh;
-    //aca para que no se rompa al cambiar los tamaños lo cambie a height - 
-    height: auto;
+    height: 100vh;
     background: linear-gradient(115.59deg, #0E0E0E 47.91%, rgba(98, 6, 0, 0.94) 98.61%);
     display: flex;
     flex-direction: column;
     #content-profile-welcome{
         height: 100vh;
-        margin-top: -10vh;
+        margin-top: -10vh; 
         #burbujas{
             width: 100%;
             height: 60%;
@@ -116,10 +115,10 @@
             background: #F77F00;
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
             border-radius: 100%;
-            position: absolute;
+            position: fixed;
             z-index: 5;
-            bottom: 2vh;
-            right: 2vw;
+            bottom: 5vh;
+            right: 1vw;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -140,6 +139,7 @@
             flex-direction: row-reverse;
             justify-content: center;
             align-items: center;
+            height: 100vh;
             #burbujas{
                 margin-top: 15vh;
                 .vector{
@@ -162,7 +162,7 @@
             }
             #welcome{
                 align-items: flex-start;
-                height: 100%;
+                min-height: 100%;
                 margin-top: 10vh;
                 padding: 2vh 0;
                 #text{
