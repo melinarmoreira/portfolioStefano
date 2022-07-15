@@ -9,14 +9,6 @@ import { motion } from "framer-motion";
 
 
 export const Home = () => {
-
-  const mql = window.matchMedia('(max-width: 600px)');
-
-  // const mobileView = mql.matches;
-
-  const enviarWsp = () =>{
-    window.location.assign("https://api.whatsapp.com/send?phone=5492914719897&text=Buenos%20dias%20Stefano%20estuve%20viendo%20tu%20portfolio...");
-  }
   const containerStyle = {
     backgroundImage:
       `url(${stefano})`,

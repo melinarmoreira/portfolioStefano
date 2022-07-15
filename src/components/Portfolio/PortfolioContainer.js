@@ -9,34 +9,20 @@ export const PortfolioContainer = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-
-            const getLista = async () => {
-                try {
-                    
-                    const querySnapshot = await getDocs(collection(db, "portfolio"))
-                    const docs = []
-                    querySnapshot.forEach((doc) => {
-                        docs.push({ ...doc.data(), id: doc.id })
-                    })
-                    setLista(docs)
-                    setLoading(false)
-                }
-                catch (error) {
-                    console.log(error)
-                }
-            }
-            getLista()
+        getDocs(collection(db, "portfolio"))
+            .then(res=> setLista(res.docs.map(item => ({id: item.id, ...item.data()}))))
+            .finally(res=>{ setLoading(false) })
         }, [])
     
     return (
-        <>  
+        <div id="portfolio-content">  
             {
             loading?
                 <div>Cargando...</div>
             :
                 <Portfolio lista = {lista}/>
             }
-        </>
+        </div>
 
     )
 }
