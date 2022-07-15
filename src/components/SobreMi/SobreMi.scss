@@ -57,6 +57,7 @@
       font-weight: 500;
     }
     .small-burbuja{
+      display: block;
       width: 35px;
       height: 35px;
       background: linear-gradient(180deg, rgba(247, 127, 0, 0.8) 0%, rgba(211, 49, 49, 0.8) 100%);
@@ -112,6 +113,9 @@
       }
       .text-content{
         text-align: left;
+      }
+      .small-burbuja{
+        display: none;
       }
     }
   }

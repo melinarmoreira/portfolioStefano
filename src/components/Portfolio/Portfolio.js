@@ -29,7 +29,7 @@ export const Portfolio = (lista) => {
 
   useEffect(() => {
     modifSlides(lista.lista)
-  }, [])
+  })
   
   const onDropDownChange = (value) => {
     if (value.value !== "todo") {
@@ -69,7 +69,7 @@ export const Portfolio = (lista) => {
   }
 
   return (
-    <div id="portfolio-content">
+    <>
       <div id="portfolio">
         <div id="texto-portfolio">
           <h2>PORTFOLIO</h2>
@@ -111,6 +111,6 @@ export const Portfolio = (lista) => {
             </Swiper>
           </div>
         </div>
-      </div>
+      </>
   );
 }

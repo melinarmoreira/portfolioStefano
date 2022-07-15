@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './NavBar.scss'
 import { FiMenu, FiX } from "react-icons/fi";
 import logoStefano from "../../img/logo/logo-stefano.png"
-
 export const NavBar = () => {
+    const [scroll, setScroll] = useState(false)
+
+    function toggleScroll(){
+        setScroll(!scroll)
+        scroll?
+            document.body.style.overflow = "visible"
+        :
+            document.body.style.overflow = "hidden"
+    }
     function closeMenu(){
+        toggleScroll()
         document.querySelector('.toggle-check').click();
     }
     
@@ -17,10 +26,10 @@ export const NavBar = () => {
         </div>
         <div id="menu-container">
             <input type="checkbox" class="toggle-check" id="toggle" name='checkbox' hidden/>
-            <label class='toggle' for="toggle"><FiMenu id='toggle'/></label>
+            <label class='toggle' for="toggle" onClick={()=>toggleScroll()}><FiMenu id='toggle'/></label>
             <div id="menu-slide">
                 <nav>
-                    <label class="toggle-menu" for="toggle"><FiX id='toggle-menu' /></label>
+                    <label class="toggle-menu" for="toggle" onClick={()=>toggleScroll()}><FiX id='toggle-menu' /></label>
                     <ul>
                         <li><a class="options-menu" onClick={()=>closeMenu()} href="#sobre-mi-content">Sobre Mi</a></li>
                         <li><a class="options-menu" onClick={()=>closeMenu()}  href="#portfolio">Portfolio</a></li>
